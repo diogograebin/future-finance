@@ -5,12 +5,16 @@
 
 body{
     font-family: Kanit, sans-serif;
-    background-color: #D1FFE4;
+    background-color: #fff;;
 }
 
 a{
     color:#fff;
     text-decoration: none;
+}
+
+h1{
+    font-size: 2rem;   
 }
 
 #cabecalho{
@@ -36,13 +40,40 @@ a{
 
 }
 
-.texto{
+#container-home{
     display: flex;
-    flex-direction: column; 
-}
-
-#texto-home{
-    display: flex;
+    margin: auto;
     flex-direction: row;
     align-items: center;
+    font-size: 1rem; 
+    
 }
+
+#text-block{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap: 10px;
+    
+}
+
+#text-block a{
+    background-color: #2B6643;
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    align-items: center;
+    font-size: 1.4rem;
+    width: 250px;
+}
+
+.texto{
+    display: flex;
+    margin: auto;    
+    align-items: center;
+    
+}
+
+
+
