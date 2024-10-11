@@ -6,7 +6,7 @@
 body{
     font-family: "Open Sans", sans-serif;
     background-color: #fff;
-    height: 4000px;
+    height: 3000px;
 }
 
 a{
@@ -17,6 +17,10 @@ a{
 h1{
     font-size: 3rem;   
     width: 130%;
+}
+
+.container h2{
+    font-size: 2.2rem;
 }
 
 .texto-card h3{
@@ -64,7 +68,7 @@ img{
 }
 
 .container{
-    gap: 100px;
+    gap: 80px;
 }
 
 #text-block{
@@ -126,6 +130,12 @@ img{
     flex-direction: column;
     gap: 20px
 }
+
+#pagina-conteudo{
+    margin-top: 100px;
+}
+
+
 
 
 
