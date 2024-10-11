@@ -4,8 +4,9 @@
 }
 
 body{
-    font-family: Kanit, sans-serif;
-    background-color: #fff;;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    height: 4000px;
 }
 
 a{
@@ -14,7 +15,17 @@ a{
 }
 
 h1{
-    font-size: 2rem;   
+    font-size: 3rem;   
+    width: 130%;
+}
+
+.texto-card h3{
+    font-size: 2rem;
+}
+
+img{
+    border-radius: 10px;
+
 }
 
 #cabecalho{
@@ -22,7 +33,7 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 80px;
+    height: 60px;
 }
 
 #links-cabecalho, #logo{
@@ -36,17 +47,24 @@ h1{
     width: 1300px;
     display: flex;
     margin: auto;
+    justify-content: space-between;
     flex-direction: column;
+
 
 }
 
-#container-home{
+.container, #cards-container{
     display: flex;
     margin: auto;
-    flex-direction: row;
+    margin-top: 50px;
+    width: 95%;
+    justify-content: space-around;
     align-items: center;
-    font-size: 1rem; 
-    
+    font-size: 1rem;   
+}
+
+.container{
+    gap: 100px;
 }
 
 #text-block{
@@ -54,7 +72,7 @@ h1{
     flex-direction: column;
     width: 600px;
     gap: 10px;
-    
+
 }
 
 #text-block a{
@@ -66,14 +84,52 @@ h1{
     align-items: center;
     font-size: 1.4rem;
     width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.texto{
+#cards-container {
     display: flex;
-    margin: auto;    
     align-items: center;
-    
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+    margin-top: 50px;
+    gap: 60px;
 }
+
+.card:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 20px;
+    background-color: #ebe9e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}.card:hover, #text-block a:hover{
+    transform: scale(1.02); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+.texto-card{
+    
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+
+
+
 
 
 
