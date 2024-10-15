@@ -32,12 +32,17 @@ img{
 
 }
 
-#cabecalho{
+#cabecalho {
+    position: fixed; /* Mantém o cabeçalho fixo na tela */
+    top: 0; /* Fica no topo da página */
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da página */
     background-color: #2B6643;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 60px;
+    z-index: 1000; /* Garante que o cabeçalho ficará acima de outros elementos */
 }
 
 #links-cabecalho, #logo{
@@ -51,6 +56,7 @@ img{
     width: 1300px;
     display: flex;
     margin: auto;
+    padding-top: 50px;
     justify-content: space-between;
     flex-direction: column;
 
@@ -118,7 +124,9 @@ img{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-}.card:hover, #text-block a:hover{
+}
+
+.card:hover, #text-block a:hover{
     transform: scale(1.02); /* Aumenta o card em 5% */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
 }
@@ -133,8 +141,54 @@ img{
 
 #pagina-conteudo{
     margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
 }
 
+#pagina-conteudo h2{
+    margin-bottom: 30px;
+}
+
+.modulo {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.modulo:hover {
+    background-color: #f0f0f0;
+}
+
+.titulo-modulo {
+    font-size: 1.5rem;
+    color: #2B6643;
+}
+
+.conteudo-modulo {
+    margin-top: 10px;
+    display: none; /* Esconde o conteúdo inicialmente */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.modulo.active .conteudo-modulo {
+    display: block; /* Exibe o conteúdo quando o módulo está ativo */
+    opacity: 1;
+    max-height: 1000px; /* Altura suficiente para o conteúdo */
+}
+
+.modulo.active {
+    background-color: #e0ffe0;
+    border-color: #2B6643;
+}
 
 
 
