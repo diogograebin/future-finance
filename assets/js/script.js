@@ -16,12 +16,30 @@ cards.forEach(card => {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Captura o link de "Home"
-    const linkHome = document.getElementById('link-home');
+    const linkHomeLogo = document.querySelector('#link-home-logo');
     // Captura a seção "Home"
     const paginaInicial = document.getElementById('pagina1');
     
     // Adiciona um evento de clique no link
-    linkHome.addEventListener('click', function(event) {
+    linkHomeLogo.addEventListener('click', function(event) {
+        // Previne o comportamento padrão do link
+        event.preventDefault();
+
+        // Realiza a rolagem suave até a seção "Home"
+        paginaInicial.scrollIntoView({
+            behavior: 'smooth' // Suave rolagem
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Captura o link de "Home"
+    const linkHomeCabecalho = document.querySelector('#link-home-cabecalho');
+    // Captura a seção "Home"
+    const paginaInicial = document.getElementById('pagina1');
+    
+    // Adiciona um evento de clique no link
+    linkHomeCabecalho.addEventListener('click', function(event) {
         // Previne o comportamento padrão do link
         event.preventDefault();
 
