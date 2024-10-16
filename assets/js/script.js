@@ -101,3 +101,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+const carrossel = document.querySelector('.carrossel');
+const items = document.querySelectorAll('.carrossel-item');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let index = 0;
+const totalItems = items.length;
+
+function showItem(idx) {
+    const offset = -idx * 100;
+    carrossel.style.transform = `translateX(${offset}%)`;
+}
+
+prevBtn.addEventListener('click', () => {
+    index = (index > 0) ? index - 1 : totalItems - 1;
+    showItem(index);
+});
+
+nextBtn.addEventListener('click', () => {
+    index = (index < totalItems - 1) ? index + 1 : 0;
+    showItem(index);
+});

@@ -196,68 +196,62 @@ img{
     border-color: #2B6643;
 }
 
-.slider{
-    margin: 0 auto;
-    width: 450px;
-    height: 360px;
-    overflow: hidden;
-    border: 1px solid red;
+/* Estilo do Carrossel */
+#carrossel-section {
+    padding: 20px;
+    text-align: center;
 }
 
-.slides{
-    width: 360%;
-    height: 400px;
-    display: flex;
-}
-
-.slides input{
-    display: none;
-}
-
-.slide{
-    width: 25%;
+.carrossel-container {
     position: relative;
+    width: 420px; /* Ajuste para incluir as margens laterais */
+    height: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
+.carrossel {
     display: flex;
-    justify-content: center;
+    transition: transform 0.4s ease-in-out;
 }
 
-.manual-btn{
-    border: 2px solid #000000;
-    padding: 5px;
-    border-radius: 8px;
+.carrossel-item {
+    min-width: 400px;
+    max-width: 400px;
+    height: 360px;
+    margin: 0 10px; /* Espaçamento lateral entre as imagens */
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    transition: 1s;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 50%;
 }
 
-.manual-btn:not(:last-child){
-    margin-right: 30px;
+.prev {
+    left: 10px;
 }
 
-.manual-btn:hover{
-    background-color: #000000;
+.next {
+    right: 10px;
 }
 
-#radio1:checked ~ .first{
-    margin-left: 1%;
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
 
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
 
 
 
