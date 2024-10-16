@@ -87,6 +87,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+    const linkAvaliacoes = document.getElementById('link-avaliacoes');
+    const secaoAvaliacoes = document.getElementById('carrossel-section');
+
+    linkAvaliacoes.addEventListener('click', function(event){
+        event.preventDefault();
+        secaoAvaliacoes.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const modulos = document.querySelectorAll('.modulo');
@@ -111,8 +125,8 @@ let index = 0;
 const totalItems = items.length;
 
 function showItem(idx) {
-    const offset = -idx * 100;
-    carrossel.style.transform = `translateX(${offset}%)`;
+    const offset = -(idx * 620); // O container agora tem 620px de largura total
+    carrossel.style.transform = `translateX(${offset}px)`;
 }
 
 prevBtn.addEventListener('click', () => {

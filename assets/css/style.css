@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Open Sans", sans-serif;
     background-color: #fff;
@@ -158,6 +162,10 @@ img{
     margin-bottom: 30px;
 }
 
+.bloco-conteudo{
+    margin-left: -50px;
+}
+
 .modulo {
     border: 1px solid #ddd;
     padding: 15px;
@@ -196,16 +204,22 @@ img{
     border-color: #2B6643;
 }
 
-/* Estilo do Carrossel */
+/* Estilo do Carrossel com divs */
 #carrossel-section {
+    margin-top: 50px;
     padding: 20px;
     text-align: center;
 }
 
+#carrossel-section h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
 .carrossel-container {
     position: relative;
-    width: 420px; /* Ajuste para incluir as margens laterais */
-    height: 360px;
+    width: 70%; /* Tamanho ajustado do container para maior encaixe */
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -217,12 +231,31 @@ img{
     transition: transform 0.4s ease-in-out;
 }
 
+.titulo-avaliacao, .carrossel-item p{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
 .carrossel-item {
-    min-width: 400px;
-    max-width: 400px;
-    height: 360px;
-    margin: 0 10px; /* Espaçamento lateral entre as imagens */
-    object-fit: cover;
+    min-width: 580px; /* Ajustei a largura para deixar espaço entre os itens */
+    margin: 0 10px; /* Pequeno espaço nas laterais */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-item p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.carrossel-item h4 {
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 .prev, .next {
@@ -250,8 +283,6 @@ img{
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-
 
 
 
