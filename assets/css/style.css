@@ -157,6 +157,7 @@ img{
     padding: 20px;
 }
 
+
 #pagina-conteudo h2{
     font-size: 3rem;
     margin-bottom: 30px;
@@ -284,7 +285,16 @@ img{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* CONFIGURAÇÕES DA PARTE DOS PREÇOS*/
 
+#investimentos-section{
+    border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+}
 
 
 

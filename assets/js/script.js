@@ -99,16 +99,12 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const modulos = document.querySelectorAll('.modulo');
 
     modulos.forEach(modulo => {
-        const titulo = modulo.querySelector('.titulo-modulo');
-        
-        titulo.addEventListener('click', function() {
+        // Adiciona o evento de clique em todo o módulo
+        modulo.addEventListener('click', function() {
             // Adiciona ou remove a classe "active" no módulo clicado
             modulo.classList.toggle('active');
         });
