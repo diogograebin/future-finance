@@ -69,20 +69,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Captura o link de "Sobre"
-    const linkSobre = document.getElementById('link-sobre');
-    // Captura a seção "Sobre"
-    const secaoCards = document.getElementById('cards-container');
-    
-    // Adiciona um evento de clique no link
-    linkSobre.addEventListener('click', function(event) {
-        // Previne o comportamento padrão do link
+document.addEventListener('DOMContentLoaded', function(){
+    const linkPrecos = document.getElementById('link-precos');
+    const secaoInvestimentos = document.getElementById('investimentos-section');
+
+    linkPrecos.addEventListener('click', function(event){
         event.preventDefault();
 
-        // Realiza a rolagem suave até a seção "Sobre"
+        secaoInvestimentos.scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const linkSobre = document.getElementById('link-sobre');
+    const secaoCards = document.getElementById('cards-container');
+    
+    linkSobre.addEventListener('click', function(event) {
+        event.preventDefault();
+
         secaoCards.scrollIntoView({
-            behavior: 'smooth' // Suave rolagem
+            behavior: 'smooth' 
         });
     });
 });

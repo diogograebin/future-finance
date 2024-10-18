@@ -5,6 +5,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body{
@@ -210,6 +211,7 @@ img{
     margin-top: 50px;
     padding: 20px;
     text-align: center;
+    margin-bottom: 150px;
 }
 
 #carrossel-section h2{
@@ -219,7 +221,7 @@ img{
 
 .carrossel-container {
     position: relative;
-    width: 70%; /* Tamanho ajustado do container para maior encaixe */
+    width: 70%; 
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -288,13 +290,98 @@ img{
 /* CONFIGURAÇÕES DA PARTE DOS PREÇOS*/
 
 #investimentos-section{
-    border: 1px solid red;
     margin: auto;
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
-    height: 500px;
+    height: 900px;
 }
+
+#titulo-investimento-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-investimento-section h2{
+    font-size: 3.5rem;
+}
+
+
+#bloco-valor{
+    background-color: #d1ffe4cc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    width: 40%;
+    height: 60%;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#bloco-valor:hover{
+    transform: scale(1.05);
+}
+
+#precos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#promocao{
+    font-size: 4rem;
+    display: flex;
+}
+
+#bloco-valor h3{
+    font-size: 2rem;
+}
+
+#bloco-valor ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+#bloco-valor ul li::before {
+    content: '✓'; /* Adiciona um ícone de check antes de cada benefício */
+    color: #2B6643;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#botao-comprar {
+    background-color: #2B6643;
+    color: #fff; 
+    font-size: 1.6rem;
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#botao-comprar:hover {
+    background-color: #1e4b2e; 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#botao-comprar:active {
+    background-color: #16401f; /* Cor ao clicar */
+    transform: scale(0.98); /* Efeito de clique */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra mais leve */
+}
+
 
 
 
