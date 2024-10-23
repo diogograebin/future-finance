@@ -14,14 +14,14 @@ body{
     height: 3000px;
 }
 
-a{
-    color:#fff;
-    text-decoration: none;
-}
-
 h1{
     font-size: 3rem;   
     width: 130%;
+}
+
+#text-block a, #cabecalho a, #bloco-footer a{
+    color:#fff;
+    text-decoration: none;
 }
 
 .container h2{
@@ -62,7 +62,7 @@ img{
 }
 
 #pagina{
-    height: 100%;
+    height: 120%;
     width: 1300px;
     display: flex;
     margin: auto;
@@ -377,13 +377,30 @@ img{
 }
 
 #botao-comprar:active {
-    background-color: #16401f; /* Cor ao clicar */
+    background-color: #16401f; 
     transform: scale(0.98); /* Efeito de clique */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra mais leve */
 }
 
+/*CONFIGURAÇÕES DO FOOTER */
 
+#bloco-footer{
+    height: 180px;
+    background-color: #1e4b2e;
+    color: #fff;
+    padding: 30px 30px 30px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+#bloco-footer li{
+    list-style: none;
+}
+
+#lista-footer{
+    gap: 10px;
+}
 
 
 
