@@ -11,7 +11,7 @@ html {
 body{
     font-family: "Open Sans", sans-serif;
     background-color: #fff;
-    height: 3000px;
+   
 }
 
 h1{
@@ -22,6 +22,10 @@ h1{
 #text-block a, #cabecalho a, #bloco-footer a{
     color:#fff;
     text-decoration: none;
+}
+
+#cabecalho img{
+    display: none;
 }
 
 .container h2{
@@ -60,6 +64,13 @@ img{
     color: #32f784;
     transition: color 1.2s ease;
 }
+
+#links-cabecalho-mobile a{
+    background-color: red;
+    border: 1px solid red;
+}
+
+/* CONFIGURAÇÕS DA PÁGINA PRINCIPAL */
 
 #pagina{
     height: 120%;
@@ -402,5 +413,167 @@ img{
     gap: 10px;
 }
 
+/*CONFIGURAÇÃO MOBILE*/
 
+@media screen and (max-width: 1300px){
+    #logo-hero-section{
+        width: 40%;
+    }
+
+    #pagina{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pagina-conteudo .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .bloco-conteudo{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .conteudo-modulo{
+        font-size: 1.2rem;
+        width: 500px;
+    }
+
+    .carrossel-container{
+        width: 105%;
+
+    }
+
+    #bloco-valor{
+        width: 90%;
+    }
+
+    @media screen and (max-width: 780px){
+        
+        #logo h2{
+            display: none;
+        }
+
+        #cabecalho{
+            font-size: 20px;
+        }
+
+        #links-cabecalho #link-avaliacoes{
+            display: none;
+        }
+
+        #logo img {
+            display: block;
+            background-color: #fff;
+            border-radius: 103%;
+            width: 45px; /* Ajuste o tamanho da logo se necessário */
+        }
+
+        #logo-hero-section{
+            width: 80%;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container h1{
+            font-size: 2.3rem;
+            width: 80%;
+        }
+
+        #text-block{
+            width: 80%;
+        }
+
+        #cards-container{
+            margin-bottom: -110px;
+        }
+
+        .card, .card:nth-child(2){
+            width: 80%;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .texto-card{
+            width: 110%;
+        }
+
+        #pagina-conteudo img{
+            width: 120%;
+        }
+
+        .conteudo-modulo{
+            width: 100%;
+        }
+
+        #carrossel-section{
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carrossel-container{   
+            height: 150%;
+        }
+
+        .carrossel-item p{
+            width: 40%;
+        }
+
+        #investimentos-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #titulo-investimento-section{
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        #titulo-investimento-section h2{
+            font-size: 3rem;
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #bloco-valor{
+            width: 110%;
+        }
+
+        #bloco-valor h3{
+            font-size: 1.5rem;
+        }
+
+        #precos h2{ 
+            font-size: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #precos #promocao{
+            font-size: 3rem;
+        }
+
+        #bloco-valor input{
+            font-size: 18px;
+        }
+
+        #bloco-footer{
+            padding-left: 20px;
+        }
+
+    }
+}
 
