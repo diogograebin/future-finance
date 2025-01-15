@@ -142,3 +142,13 @@ nextBtn.addEventListener('click', () => {
     index = (index < totalItems - 1) ? index + 1 : 0;
     showItem(index);
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 1100, 
+        once: false, 
+        offset: 120, 
+    });
+});
